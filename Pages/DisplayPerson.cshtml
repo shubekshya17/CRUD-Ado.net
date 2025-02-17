@@ -1,0 +1,24 @@
+﻿@page
+@model DotnetLab6.Pages.DisplayPersonModel
+@{
+}
+<h1>Display Person</h1>
+<table class="table">
+    <thead>
+    <th>Name</th>
+    <th>PhoneNo</th>
+    <th>Email</th>
+    </thead>
+@foreach(var per in Model.PersonList)
+    {
+        <tr>
+        <td>@per.Name</td>
+        <td>@per.PhoneNo</td>
+        <td>@per.Email</td>
+        <td>
+                <a href="/EditPerson?id=@per.Id" class="btn btn-primary">Edit</a>
+                <a href="/DeletePerson?id=@per.Id" class="btn btn-danger">Delete</a>
+        </td>
+        </tr>
+    }
+</table>

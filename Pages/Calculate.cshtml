@@ -1,0 +1,14 @@
+﻿@page
+@model DotnetLab6.Pages.CalculateModel
+@{
+}
+<form method="post">
+<h1>Addition</h1>
+@Model.title<br/>
+    <label>Enter First Number:</label><br />
+<input type="text" asp-for="num1"/><br />
+    <label>Enter Second Number:</label><br/>
+<input type="text" asp-for="num2"/><br />
+<input type="submit" value="Add" class="btn btn-primary"/>
+</form>
+@Model.sum
